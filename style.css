@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 10;
+    position: relative;
+
+}
+
+.button:hover,
+.button:focus{
+    background: #ccc;
+}
+
+.app-header h1{
+text-align: center;
+margin-top: 20px;
+}
+
+
+.new-todo{
+    display: flex;
+}
+.new-todo input{
+    flex-grow: 1;
+    height: 35px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border 0.2s;
+
+}
+.new-todo input:hover,
+.new-todo input:focus{
+border-color: rgb(99, 153, 104);
+
+}
+
+
+.todo-section{
+    margin: 40px 0;
+
+}
+
+.todo-list{
+    background: rgba(134, 199, 134, 0.185);
+    padding: 20px  30px;
+}
+
+.todo{
+    display: flex;
+    padding: 10px 0;
+    border-bottom:  1px solid #ddd;
+    cursor: pointer;
+}
+
+
+.todo:last-child{
+    border: none;
+}
+
+.todo .text{
+    position: relative;
+    flex-grow: 1;
+    padding: 0 30px;
+}
+.todo .text::before{
+    content:'';
+    position: absolute;
+    top: 3px;
+    left: 0%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+}
+
+.todo .text.complited{
+    text-decoration: line-through;
+}
+
+.todo .text.text.complited::before{
+    background: #e100003a;
+}
+
+.todo .delete:hover{
+    color: red;
+}
+
+.wave{
+    position: fixed ;
+    left: 0;
+    bottom: 0;
+}
